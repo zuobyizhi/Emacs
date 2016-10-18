@@ -745,3 +745,5 @@ _s_: sof          ^ ^
 (evilem-default-keybindings "SPC")
 
 (setq diary-file "~/.emacs.d/zuobyizhi/.diary")
+
+;;github地址 https://github.com/zuobyizhi/Emacs.git 

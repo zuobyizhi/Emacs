@@ -522,7 +522,8 @@ _s_: sof          ^ ^
 (autoload 'highlight-symbol "highlight-symbol" "" t)
 (autoload 'highlight-symbol-next "highlight-symbol" "" t)
 ;; (evil-leader/set-key "h" 'highlight-symbol)
-;; (evil-leader/set-key "n" 'highlight-symbol-next)
+(evil-leader/set-key "n" 'highlight-symbol-next)
+(global-set-key (kbd "C-,") 'highlight-symbol-next)
 (evil-leader/set-key "h" 'hydra-highlight-symbol/body)
 (defhydra hydra-highlight-symbol
   (:foreign-keys warn) ;;hydra和evil有冲突，必须设置成warn
@@ -706,7 +707,7 @@ _s_: sof          ^ ^
 	  (insert "\n")
 	  (insert (cond
 			   ((and bweekday (= hour 9) (and (<= minute 45) (>= minute 30))) "开盘前十五分钟先观察。")
-			   ((and (= hour 14) (>= minute 50) bweekday) "保险交易时间。留意大盘、恒指是否超越均线。")
+			   ((and (= hour 14) (>= minute 50) bweekday) "保险交易时间。留意大盘、恒指是否超越均线、是否背驰。")
 			   (t "")
 			   ))
 	  (insert "\n\n\n")
@@ -722,6 +723,8 @@ _s_: sof          ^ ^
 			 (setq python-indent 4)
 			 (setq tab-width 4)
 			 (define-coding-system-alias 'GBK 'chinese-gbk)
+			 (indent-tabs-mode nil)
+			 (evil-leader-mode) ;;文档没有提到这句，但加上才有效。。
 			 ))
 
 ;; (require 'general)
@@ -747,3 +750,19 @@ _s_: sof          ^ ^
 (setq diary-file "~/.emacs.d/zuobyizhi/.diary")
 
 ;;github地址 https://github.com/zuobyizhi/Emacs.git 
+
+(defun open-whitespace ()
+  ""
+  (interactive)
+  (progn 
+	(require 'whitespace)
+	(setq whitespace-style
+		  '(face indentation::tab indentation::space tabs tab-mark trailing))
+	(whitespace-mode 1) 
+	)
+  )
+
+(defun tabify-buffer ()
+  "Tabify the entire buffer."
+  (interactive)
+  (tabify (point-min) (point-max)))

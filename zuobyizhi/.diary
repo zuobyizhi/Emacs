@@ -4,3 +4,14 @@ Oct 17, 2016
 Oct 18, 2016 
 通过Settings.System读取系统配置。
 卖出常熟银行。买入st五稀。
+第一次提交到github。提交的是.emacs.d。
+Oct 19, 2016 
+想引入pyglet打开wav文件。然而打包后放到另一台虚拟机上有问题。
+重构了消费系统gtpye相关的代码。
+Oct 20, 2016 
+验证pyglet不能跨机的原因。因为avbin在打包的时候没包进去。
+python类和dict的学习。
+python的@功能。装饰器。http://python.jobbole.com/86632/
+可以在Android studio里面装旧的api。
+Oct 21, 2016 
+将usr/local下的avbin.so打包进去即可。搜索sh: find / -name "*avbin*"

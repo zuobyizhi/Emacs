@@ -16,4 +16,6 @@
  ("股市日历" . "http://data.eastmoney.com/gsrl/#")
  ("贴吧_亚人吧" . "http://tieba.baidu.com/f?kw=%E4%BA%9A%E4%BA%BA&fr=wwwt")
  ("贴吧_海吧" . "http://tieba.baidu.com/f?kw=%E6%B5%B7%E8%B4%BC%E7%8E%8B&fr=wwwt")
+ ("足球_英超" . "https://www.baidu.com/baidu?tn=monline_3_dg&ie=utf-8&wd=%E8%8B%B1%E8%B6%85")
+ ("足球_西甲" . "https://www.baidu.com/baidu?tn=monline_3_dg&ie=utf-8&wd=%E8%A5%BF%E7%94%B2")
  ("领先指标" . "http://stockcharts.com/h-sc/ui?s=$HSCEI:$SPX&p=W&yr=5&mn=0&dy=0&id=p99607518518"))

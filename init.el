@@ -765,4 +765,14 @@ _s_: sof          ^ ^
 (defun tabify-buffer ()
   "Tabify the entire buffer."
   (interactive)
-  (tabify (point-min) (point-max)))
+  (if (string= major-mode "python-mode")
+	  (tabify (point-min) (point-max))))
+(defun whitespace-buffer ()
+  "whitespace the entire buffer."
+  (interactive)
+  (if (string= major-mode "python-mode")
+	  (whitespace-mode 1)))
+
+; tabify on save
+(add-hook 'before-save-hook 'tabify-buffer)
+(add-hook 'find-file-hook 'whitespace-buffer)

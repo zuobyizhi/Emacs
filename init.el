@@ -10,7 +10,7 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 (add-to-list 'load-path "~/.emacs.d/elisp/evil")
 (require 'evil)
-(evil-mode 1)
+;; (evil-mode 1)
 (global-set-key (kbd "C-h")
 'backward-delete-char-untabify)
 
@@ -496,6 +496,7 @@ _s_: sof          ^ ^
 (evil-leader/set-key "w" 'save-buffer)
 (evil-leader/set-key "o" 'counsel-find-file)
 (evil-leader-mode) ;;文档没有提到这句，但加上才有效。。
+(evil-mode 1) ;; evil-mode要放在evil-leader-mode后面。
 
 (require 'phi-grep)
 
@@ -723,8 +724,8 @@ _s_: sof          ^ ^
 			 (setq python-indent 4)
 			 (setq tab-width 4)
 			 (define-coding-system-alias 'GBK 'chinese-gbk)
-			 (indent-tabs-mode nil)
-			 (evil-leader-mode) ;;文档没有提到这句，但加上才有效。。
+			 ;; (indent-tabs-mode nil)
+			 ;; (evil-leader-mode) ;;文档没有提到这句，但加上才有效。。
 			 ))
 
 ;; (require 'general)
@@ -776,3 +777,11 @@ _s_: sof          ^ ^
 ; tabify on save
 (add-hook 'before-save-hook 'tabify-buffer)
 (add-hook 'find-file-hook 'whitespace-buffer)
+
+(defun reload-this-buffer ()
+  ""
+  (interactive )
+  (setq bfn buffer-file-name)
+  (kill-buffer)
+  (find-file bfn)
+)

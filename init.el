@@ -439,14 +439,17 @@ _s_: sof          ^ ^
   ("t" string-rectangle "string-rectangle" :exit t)
   )
 
-(add-to-list 'load-path "~/.emacs.d/elisp/powerline/")
+;; (add-to-list 'load-path "~/.emacs.d/elisp/powerline/")
+;; (require 'powerline)
+;; (setq powerline-arrow-shape 'arrow)   ;; the default
+;; (setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
+;; (setq powerline-arrow-shape 'arrow14) ;; best for small fonts
+;; (custom-set-faces
+;;  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+;;  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+(add-to-list 'load-path "~/.emacs.d/elisp/powerline2/")
 (require 'powerline)
-(setq powerline-arrow-shape 'arrow)   ;; the default
-(setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
-(setq powerline-arrow-shape 'arrow14) ;; best for small fonts
-(custom-set-faces
- '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
- '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+(powerline-default-theme)
 
 ;;(add-to-list 'load-path "~/.emacs.d/elisp/powerline/")
 ;;(require 'powerline)

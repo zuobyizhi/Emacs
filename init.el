@@ -439,18 +439,21 @@ _s_: sof          ^ ^
   ("t" string-rectangle "string-rectangle" :exit t)
   )
 
-;;(require 'powerline)
-;;(setq powerline-arrow-shape 'arrow)   ;; the default
-;;(setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
-;;(setq powerline-arrow-shape 'arrow14) ;; best for small fonts
-;;(custom-set-faces
- ;;'(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
- ;;'(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+(add-to-list 'load-path "~/.emacs.d/elisp/powerline/")
+(require 'powerline)
+(setq powerline-arrow-shape 'arrow)   ;; the default
+(setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
+(setq powerline-arrow-shape 'arrow14) ;; best for small fonts
+(custom-set-faces
+ '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 
-;; (add-to-list 'load-path "~/.emacs.d/elisp/powerline/")
-;; (require 'powerline)
+;;(add-to-list 'load-path "~/.emacs.d/elisp/powerline/")
+;;(require 'powerline)
 ;; (require 'powerline-evil)
 ;; (powerline-evil-face)
+;; ;; (display-time-mode t)
+;; (setq powerline-default-separator 'wave)
 
 ;;(add-to-list 'load-path "~/.emacs.d/elisp/dash/")
 ;;(require 'dash)
@@ -785,3 +788,13 @@ _s_: sof          ^ ^
   (kill-buffer)
   (find-file bfn)
 )
+
+(setq abbrev-file-name "~/.emacs.d/abbrev_defs")
+(global-set-key [C-tab] 'expand-abbrev) 
+
+(setq evil-emacs-state-cursor '("red" box))
+(setq evil-normal-state-cursor '("white" box))
+(setq evil-visual-state-cursor '("orange" box))
+(setq evil-insert-state-cursor '("#89cff0" bar))
+(setq evil-replace-state-cursor '("red" bar))
+(setq evil-operator-state-cursor '("red" hollow))

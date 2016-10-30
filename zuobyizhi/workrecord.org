@@ -12,17 +12,20 @@
 **** 消费系统客户端
 ***** 第一期
 ****** pyinstaller打包
+	   python pyinstaller -F xxx.py \\
+	   2.1版直接可用，不需要安装；3.2报错是因为要装python27-dev。
 ****** 编码问题
 ****** urllib2超时
+	   post不设超时有时会卡住不动。所以要设。
 ****** tkinter做界面
 ***** 第二期
 	  到16.11.04。难点在语言和tk界面画一个表。
 ****** 多个物品
 ****** 语音
 ******* 第三方库选用
-		目标：打包能成功。并且跨平台（因为在win下写更方便）。
-		pygame在win下安装不了。
-		pyglet打包了再虚拟机打开不了。size of format chunk is incorrect.是因为没装avbin的问题。
+		目标：打包能成功。并且跨平台（因为在win下写更方便）。\\
+		pygame在win下安装不了。\\
+		pyglet打包了再虚拟机打开不了。size of format chunk is incorrect.是因为没装avbin的问题。\\
 ** 个人项目
 *** github
 *** emacs
@@ -33,5 +36,8 @@
 **** 当前事务提醒
 **** 本地中英文字典
 **** 本地主要文献搜索
+**** major-mode
+***** tdxscript-mode
+	  通达信脚本语法着色
 *** python
 **** 点数图项目

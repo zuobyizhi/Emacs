@@ -21,6 +21,10 @@
 ***** 第二期
 	  到16.11.04。难点在语言和tk界面画一个表。
 ****** 多个物品
+******* ttk.Treeview
+		[[https://docs.python.org/3/library/tkinter.ttk.html#ttk-treeview][ttk]]
+		[[http://www.tkdocs.com/tutorial/tree.html][tkdocs_tree]]
+		[[http://www.cnblogs.com/wumac/p/5841875.html][treeview文档中文翻译]]
 ****** 语音
 ******* 第三方库选用
 		目标：打包能成功。并且跨平台（因为在win下写更方便）。\\

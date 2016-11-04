@@ -812,3 +812,12 @@ _s_: sof          ^ ^
 (setq evil-insert-state-cursor '("#89cff0" bar))
 (setq evil-replace-state-cursor '("red" hbar))
 (setq evil-operator-state-cursor '("red" hollow))
+
+;; major-mode
+(add-to-list 'load-path "~/.emacs.d/elisp/major-mode/")
+(require 'tdxscript-mode)
+(add-to-list 'auto-mode-alist '("\\.tdxscript$" . tdxscript-mode))
+(require 'mq-mode)
+(add-to-list 'auto-mode-alist '("\\.mq$" . mq-mode))
+(require 'xahk-mode)
+(add-to-list 'auto-mode-alist '("\\.ahk$" . xahk-mode))

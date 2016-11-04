@@ -26,6 +26,8 @@
 		[[http://www.tkdocs.com/tutorial/tree.html][tkdocs_tree]]
 		[[http://www.cnblogs.com/wumac/p/5841875.html][treeview文档中文翻译]]
 ****** 语音
+	   [[https://www.coolutils.com/online/PNG-to-GIF#][在线png转gif]]
+	   [[http://www.easyicon.net/1147253-mute_icon.html][easyicon]]
 ******* 第三方库选用
 		目标：打包能成功。并且跨平台（因为在win下写更方便）。\\
 		pygame在win下安装不了。\\
@@ -42,6 +44,8 @@
 **** 本地主要文献搜索
 **** major-mode
 ***** tdxscript-mode
-	  通达信脚本语法着色
+****** 教程
+	   [[http://ergoemacs.org/emacs/elisp_syntax_coloring.html][李杀网教程]]
+	   通达信脚本语法着色
 *** python
 **** 点数图项目
